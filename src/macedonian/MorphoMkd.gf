@@ -6875,7 +6875,7 @@ mkV001 base_1 =
                    adverbial = base_1+"јќи"
                  } ;
     noun_from_verb = base_1+"ње" ;
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV002 : Str -> V ;
@@ -6942,7 +6942,7 @@ mkV002 base_1 =
                    adverbial = base_1+"јќи"
                  } ;
     noun_from_verb = base_1+"ње" ;
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV003 : Str -> V ;
@@ -7010,7 +7010,7 @@ mkV003 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV003"
   } ;
@@ -7080,7 +7080,7 @@ mkV004 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV004"
   } ;
@@ -7150,7 +7150,7 @@ mkV005 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV005"
   } ;
@@ -7220,7 +7220,7 @@ mkV006 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV006"
   } ;
@@ -7290,7 +7290,7 @@ mkV007 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV007"
   } ;
@@ -7360,7 +7360,7 @@ mkV008 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV008"
   } ;
@@ -7429,7 +7429,7 @@ mkV009 base_1 =
                    adverbial = base_1+"јќи" --guessed
                  } ;
     noun_from_verb = base_1+"ње" ; --guessed
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV010 : Str -> V ;
@@ -7497,7 +7497,7 @@ mkV010 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV010"
   } ;
@@ -7567,7 +7567,7 @@ mkV011 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV011"
   } ;
@@ -7637,7 +7637,7 @@ mkV012 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV012"
   } ;
@@ -7706,7 +7706,7 @@ mkV013 base_1 =
                    adverbial = base_1+"јќи"
                  } ;
     noun_from_verb = base_1+"ње" ;
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV014 : Str -> V ;
@@ -7774,7 +7774,7 @@ mkV014 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV014"
   } ;
@@ -7844,7 +7844,7 @@ mkV015 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV015"
   } ;
@@ -7914,7 +7914,7 @@ mkV016 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV016"
   } ;
@@ -7983,7 +7983,7 @@ mkV017 base_1 =
                    adverbial = base_1+"јќи" --guessed
                  } ;
     noun_from_verb = base_1+"ње" ; --guessed
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV018 : Str -> V ;
@@ -8051,7 +8051,7 @@ mkV018 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV018"
   } ;
@@ -8121,7 +8121,7 @@ mkV019 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV019"
   } ;
@@ -8191,7 +8191,7 @@ mkV020 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV020"
   } ;
@@ -8261,7 +8261,7 @@ mkV021 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV021"
   } ;
@@ -8331,7 +8331,7 @@ mkV022 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV022"
   } ;
@@ -8401,7 +8401,7 @@ mkV023 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV023"
   } ;
@@ -8471,7 +8471,7 @@ mkV024 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV024"
   } ;
@@ -8541,7 +8541,7 @@ mkV025 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV025"
   } ;
@@ -8611,7 +8611,7 @@ mkV026 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV026"
   } ;
@@ -8681,7 +8681,7 @@ mkV027 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV027"
   } ;
@@ -8751,7 +8751,7 @@ mkV028 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV028"
   } ;
@@ -8821,7 +8821,7 @@ mkV029 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV029"
   } ;
@@ -8891,7 +8891,7 @@ mkV030 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV030"
   } ;
@@ -8961,7 +8961,7 @@ mkV031 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV031"
   } ;
@@ -9031,7 +9031,7 @@ mkV032 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV032"
   } ;
@@ -9101,7 +9101,7 @@ mkV033 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV033"
   } ;
@@ -9171,7 +9171,7 @@ mkV034 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV034"
   } ;
@@ -9241,7 +9241,7 @@ mkV035 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV035"
   } ;
@@ -9311,7 +9311,7 @@ mkV036 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV036"
   } ;
@@ -9381,7 +9381,7 @@ mkV037 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV037"
   } ;
@@ -9451,7 +9451,7 @@ mkV038 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV038"
   } ;
@@ -9521,7 +9521,7 @@ mkV039 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV039"
   } ;
@@ -9591,7 +9591,7 @@ mkV040 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV040"
   } ;
@@ -9661,7 +9661,7 @@ mkV041 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV041"
   } ;
@@ -9731,7 +9731,7 @@ mkV042 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV042"
   } ;
@@ -9801,7 +9801,7 @@ mkV043 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV043"
   } ;
@@ -9870,7 +9870,7 @@ mkV044 base_1 =
                    adverbial = base_1+"јќи"
                  } ;
     noun_from_verb = base_1+"ње" ;
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV045 : Str -> V ;
@@ -9938,7 +9938,7 @@ mkV045 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV045"
   } ;
@@ -10008,7 +10008,7 @@ mkV046 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV046"
   } ;
@@ -10078,7 +10078,7 @@ mkV047 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV047"
   } ;
@@ -10148,7 +10148,7 @@ mkV048 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV048"
   } ;
@@ -10218,7 +10218,7 @@ mkV049 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV049"
   } ;
@@ -10288,7 +10288,7 @@ mkV050 base =
                        adverbial = base_1+"и"+base_2+"јќи"
                      } ;
         noun_from_verb = base_1+"и"+base_2+"ње" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV050"
   } ;
@@ -10357,7 +10357,7 @@ mkV051 base_1 =
                    adverbial = base_1+"јќи"
                  } ;
     noun_from_verb = base_1+"ње" ;
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV052 : Str -> V ;
@@ -10425,7 +10425,7 @@ mkV052 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV052"
   } ;
@@ -10495,7 +10495,7 @@ mkV053 base =
                        adverbial = base_1+"ејќи" --guessed
                      } ;
         noun_from_verb = base_1+"ење" ; --guessed
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV053"
   } ;
@@ -10565,7 +10565,7 @@ mkV054 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV054"
   } ;
@@ -10634,7 +10634,7 @@ mkV055 base_1 =
                    adverbial = nonExist
                  } ;
     noun_from_verb = base_1+"ње" ; --guessed
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV056 : Str -> V ;
@@ -10702,7 +10702,7 @@ mkV056 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV056"
   } ;
@@ -10772,7 +10772,7 @@ mkV057 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV057"
   } ;
@@ -10842,7 +10842,7 @@ mkV058 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV058"
   } ;
@@ -10912,7 +10912,7 @@ mkV059 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV059"
   } ;
@@ -10982,7 +10982,7 @@ mkV060 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV060"
   } ;
@@ -11052,7 +11052,7 @@ mkV061 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV061"
   } ;
@@ -11122,7 +11122,7 @@ mkV062 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV062"
   } ;
@@ -11192,7 +11192,7 @@ mkV063 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV063"
   } ;
@@ -11262,7 +11262,7 @@ mkV064 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV064"
   } ;
@@ -11332,7 +11332,7 @@ mkV065 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV065"
   } ;
@@ -11402,7 +11402,7 @@ mkV066 base =
                        adverbial = base_1+"ејќи"
                      } ;
         noun_from_verb = base_1+"ење" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV066"
   } ;
@@ -11472,7 +11472,7 @@ mkV067 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV067"
   } ;
@@ -11542,7 +11542,7 @@ mkV068 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV068"
   } ;
@@ -11612,7 +11612,7 @@ mkV069 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV069"
   } ;
@@ -11682,7 +11682,7 @@ mkV070 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV070"
   } ;
@@ -11752,7 +11752,7 @@ mkV071 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV071"
   } ;
@@ -11822,7 +11822,7 @@ mkV072 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV072"
   } ;
@@ -11892,7 +11892,7 @@ mkV073 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV073"
   } ;
@@ -11962,7 +11962,7 @@ mkV074 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV074"
   } ;
@@ -12032,7 +12032,7 @@ mkV075 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV075"
   } ;
@@ -12102,7 +12102,7 @@ mkV076 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV076"
   } ;
@@ -12172,7 +12172,7 @@ mkV077 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV077"
   } ;
@@ -12242,7 +12242,7 @@ mkV078 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV078"
   } ;
@@ -12312,7 +12312,7 @@ mkV079 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV079"
   } ;
@@ -12382,7 +12382,7 @@ mkV080 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV080"
   } ;
@@ -12452,7 +12452,7 @@ mkV081 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV081"
   } ;
@@ -12522,7 +12522,7 @@ mkV082 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV082"
   } ;
@@ -12592,7 +12592,7 @@ mkV083 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV083"
   } ;
@@ -12662,7 +12662,7 @@ mkV084 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV084"
   } ;
@@ -12732,7 +12732,7 @@ mkV085 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV085"
   } ;
@@ -12802,7 +12802,7 @@ mkV086 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV086"
   } ;
@@ -12872,7 +12872,7 @@ mkV087 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV087"
   } ;
@@ -12942,7 +12942,7 @@ mkV088 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV088"
   } ;
@@ -13012,7 +13012,7 @@ mkV089 base =
                        adverbial = base_1+"фи"+base_2+base_3+"јќи"
                      } ;
         noun_from_verb = base_1+"фи"+base_2+base_3+"ње" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV089"
   } ;
@@ -13081,7 +13081,7 @@ mkV090 base_1 =
                    adverbial = nonExist
                  } ;
     noun_from_verb = base_1+"ње" ;
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV091 : Str -> V ;
@@ -13148,7 +13148,7 @@ mkV091 base_1 =
                    adverbial = nonExist
                  } ;
     noun_from_verb = base_1+"ње" ;
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkV092 : Str -> V ;
@@ -13216,7 +13216,7 @@ mkV092 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV092"
   } ;
@@ -13286,7 +13286,7 @@ mkV093 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV093"
   } ;
@@ -13356,7 +13356,7 @@ mkV094 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV094"
   } ;
@@ -13426,7 +13426,7 @@ mkV097 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV097"
   } ;
@@ -13496,7 +13496,7 @@ mkV098 base =
                        adverbial = base_1+base_2+"јќи"
                      } ;
         noun_from_verb = base_1+base_2+"ње" ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV098"
   } ;
@@ -13566,7 +13566,7 @@ mkV099 base =
                        adverbial = nonExist
                      } ;
         noun_from_verb = nonExist ;
-        isRefl = False
+        vtype = VNormal
       };
     _ => error "Can't apply paradigm mkV099"
   } ;
@@ -13635,7 +13635,7 @@ mkV101 base_1 =
                    adverbial = nonExist
                  } ;
     noun_from_verb = nonExist ;
-    isRefl = False
+    vtype = VNormal
   } ;
 
 mkA001 : Str -> A ;

@@ -1051,7 +1051,9 @@ mkV = overload {
   mkV : Str -> Str -> Str -> V = reg3V   -- present;Sg;P3  participle;adverbial  participle;adjectival
 } ;
 
-reflV : V -> V = \v -> v ** {isRefl=True} ;
+accusative : Case = Acc ;
+dative : Case = Dat ;
+medialV : V -> Case -> V = \v,c -> v ** {vtype=VMedial c} ;
 
 dualV : V -> V -> V = \impf,perf -> lin V
   { present = table {
@@ -1083,7 +1085,7 @@ dualV : V -> V -> V = \impf,perf -> lin V
                    adverbial = impf.participle.adverbial
                  } ;
     noun_from_verb = impf.noun_from_verb ;
-    isRefl = impf.isRefl
+    vtype = impf.vtype
   } ;
 
 compoundV = overload {
@@ -1099,7 +1101,7 @@ compoundV = overload {
                    adverbial = v.participle.adverbial
                  } ;
     noun_from_verb = v.noun_from_verb ++ s ;
-    isRefl = v.isRefl
+    vtype = v.vtype
   }
 } ;
 
