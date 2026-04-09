@@ -46,6 +46,7 @@ lincat VPSlash = {present : Aspect => Number => Person => Str;
 lincat Cl = {present : Aspect => Str;
              aorist : Str;
              participle : {aorist : Aspect => Str; perfect : Aspect => Str}} ;
+lincat RP = {s : GenNum => Str} ;
 lincat IP = {s : Str} ;
 lincat Subj = {s : Str} ;
 
