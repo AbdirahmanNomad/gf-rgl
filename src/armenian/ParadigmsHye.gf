@@ -477,7 +477,6 @@ oper
   mkSubj : Str -> Subj = \s -> lin Subj {s=s} ;
   mkQuant : Str -> Quant = \s -> lin Quant {s=s} ;
   mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;
-  mkDet : Str -> Det = \s -> lin Det {s=s} ;
   mkCard : Str -> Card = \s -> lin Card {s=s} ;
   mkConj : Str -> Conj = \s -> lin Conj {s=s} ;
   mkPConj : Str -> PConj = \s -> lin PConj {s=s} ;
