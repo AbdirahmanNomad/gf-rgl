@@ -1,2 +1,2 @@
-concrete GrammarMkd of Grammar = VerbMkd,SentenceMkd,NounMkd,AdverbMkd,AdjectiveMkd,NumeralMkd,PhraseMkd,RelativeMkd,TextX,StructuralMkd,TenseX ** {
+concrete GrammarMkd of Grammar = VerbMkd,SentenceMkd,NounMkd,AdverbMkd,AdjectiveMkd,IdiomMkd,NumeralMkd,PhraseMkd,RelativeMkd,TextMkd,StructuralMkd,TenseMkd ** {
 }

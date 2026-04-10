@@ -1,10 +1,9 @@
-resource ResMkd = ParamX [DTail,T1,T2,T3,inc] ** open Prelude in {
+resource ResMkd = ParamX - [Tense] ** open Prelude in {
 
 oper Compl = {s : Str} ;
 
 param Species = Indef | Def Distance ;
 param Distance = Unspecified | Distal | Proximal ;
-param Number = Sg | Pl ;
 param NRelType = Pref | AdjMod | AdvMod ;
 param Gender = Masc | Fem | Neuter ;
 oper Noun = {s: Species => Number => Str; count_form: Str; vocative: Number => Str; rel: Species => GenNum => Str; relType : NRelType; g: Gender} ; -- 24855
@@ -40,10 +39,18 @@ oper mkNoun : (_,_,_,_,_,_,_,_,_,_,_ : Str) -> Gender -> Noun =
 
 
 param Aspect = Imperfective | Perfective ;
-param Person = P1 | P3 | P2 ;
 param GenNum = GSg Gender | GPl ;
 param VType = VNormal | VMedial Case ;
-oper Verb = {present: Aspect => Number => Person => Str; aorist: Number => Person => Str; imperfect: Aspect => Number => Person => Str; imperative: Aspect => Number => Str; participle: {aorist: Aspect => GenNum => Str; imperfect: GenNum => Str; perfect: Aspect => Str; adjectival: Aspect => Str; adverbial: Str}; noun_from_verb: Str; vtype: VType} ; -- 8174
+      Tense = VPresent
+            | VPastSimple     --# notpresent
+            | VPastImperfect  --# notpresent
+            | VFut            --# notpresent
+            | VCond           --# notpresent
+            ;
+
+      Order = Main | Quest ;
+
+oper Verb = {present: Aspect => Number => Person => Str; aorist: Number => Person => Str; imperfect: Aspect => Number => Person => Str; imperative: Aspect => Number => Str; participle: {aorist: Aspect => GenNum => Str; imperfect: Aspect => GenNum => Str; perfect: Aspect => Str; adjectival: Aspect => Str; adverbial: Str}; noun_from_verb: Str; vtype: VType} ; -- 8174
 oper mkVerb : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> Verb =
        \f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,f17,f18,f19,f20,f21,f22,f23,f24,f25,f26,f27,f28,f29,f30,f31,f32 ->
           { present = \\_ =>
@@ -96,7 +103,8 @@ oper mkVerb : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ :
                                       GSg Neuter => f23 ;
                                       GPl => f24
                                     } ;
-                           imperfect = table {
+                           imperfect = \\_ =>
+                                       table {
                                          GSg Masc => f25 ;
                                          GSg Fem => f26 ;
                                          GSg Neuter => f27 ;
@@ -154,12 +162,105 @@ oper mkAdv : Str -> Adv =
 
 param Case = Acc | Dat ;
 param Role = RSubj | RObj Case | RPrep ;
-oper Pron = {s : Role => Str; clitic : Case => Str; g : GenNum; p : Person} ;
+oper Pronoun = {s : Role => Str; clitic : Case => Str; g : GenNum; p : Person} ;
 
 genNum : Gender -> Number -> GenNum = \g,n ->
   case n of {
     Sg => GSg g ;
     Pl => GPl
   } ;
+
+auxBe = {
+  present : Number => Person => Str
+          = table {
+              Sg => table {
+                      P1 => "сум" ;
+                      P2 => "си" ;
+                      P3 => "е"
+                    } ;
+              Pl => table {
+                      P1 => "сме" ;
+                      P2 => "сте" ;
+                      P3 => "се"
+                    }
+            } ;
+  imperfect : Number => Person => Str
+          = table {
+              Sg => table {
+                      P1 => "бев" ;
+                      P2 => "беше" ;
+                      P3 => "беше"
+                    } ;
+              Pl => table {
+                      P1 => "бевме" ;
+                      P2 => "бевте" ;
+                      P3 => "беа"
+                    }
+            } ;
+  imperative : Number => Str =
+            table {
+              Sg => "биди" ;
+              Pl => "бидете"
+            } ;
+  participle = {
+    aorist : GenNum => Str
+           = table {
+               GSg Masc => "бил" ;
+               GSg Fem => "била" ;
+               GSg Neuter => "било" ;
+               GPl => "биле"
+             } ;
+    imperfect : GenNum => Str
+           = table {
+               GSg Masc => "бидел" ;
+               GSg Fem => "бидела" ;
+               GSg Neuter => "бидело" ;
+               GPl => "биделе"
+             }
+    }
+} ;
+
+auxHave = {
+  present : Number => Person => Str
+          = table {
+              Sg => table {
+                      P1 => "имам" ;
+                      P2 => "имаш" ;
+                      P3 => "има"
+                    } ;
+              Pl => table {
+                      P1 => "имаме" ;
+                      P2 => "имате" ;
+                      P3 => "имаат"
+                    }
+            } ;
+  imperfect : Number => Person => Str
+          = table {
+              Sg => table {
+                      P1 => "имав" ;
+                      P2 => "имаше" ;
+                      P3 => "имаше"
+                    } ;
+              Pl => table {
+                      P1 => "имавме" ;
+                      P2 => "имавте" ;
+                      P3 => "имаа"
+                    }
+            } ;
+  imperative : Number => Str =
+            table {
+              Sg => "имај" ;
+              Pl => "имајте"
+            } ;
+  participle = {
+    imperfect : GenNum => Str
+           = table {
+               GSg Masc => "имал" ;
+               GSg Fem => "имала" ;
+               GSg Neuter => "имало" ;
+               GPl => "имале"
+             }
+    }
+} ;
 
 }

@@ -1073,7 +1073,10 @@ dualV : V -> V -> V = \impf,perf -> lin V
                               Imperfective => impf.participle.aorist ! Imperfective ;
                               Perfective   => perf.participle.aorist ! Perfective
                             } ;
-                   imperfect = impf.participle.imperfect ;
+                   imperfect = table {
+                                 Imperfective => impf.participle.imperfect ! Imperfective ;
+                                 Perfective   => perf.participle.imperfect ! Perfective
+                               } ;
                    perfect = table {
                                Imperfective => impf.participle.perfect ! Imperfective ;
                                Perfective   => perf.participle.perfect ! Perfective
@@ -1095,7 +1098,7 @@ compoundV = overload {
     imperfect = \\a,n,p => v.imperfect ! a ! n ! p ++ s ;
     imperative = \\a,n => v.imperative ! a ! n ++ s ;
     participle = { aorist = \\a,gn => v.participle.aorist ! a ! gn ++ s ;
-                   imperfect = \\gn => v.participle.imperfect ! gn ++ s ;
+                   imperfect = \\a,gn => v.participle.imperfect ! a ! gn ++ s ;
                    perfect = \\a => v.participle.perfect ! a ++ s ;
                    adjectival = \\a => v.participle.adjectival ! a ++ s ;
                    adverbial = v.participle.adverbial

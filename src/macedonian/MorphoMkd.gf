@@ -6864,13 +6864,14 @@ mkV001 base_1 =
                               GSg Neuter => base_1+"ло" ; --guessed
                               GPl => base_1+"ле" --guessed
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => base_1+"л" ;
                                  GSg Fem => base_1+"ла" ;
                                  GSg Neuter => base_1+"ло" ;
                                  GPl => base_1+"ле"
                                } ;
-                   perfect = \\_ => nonExist ;
+                   perfect = \\_ => base_1+"но" ;
                    adjectival = \\_ => base_1+"н" ;
                    adverbial = base_1+"јќи"
                  } ;
@@ -6931,7 +6932,8 @@ mkV002 base_1 =
                               GSg Neuter => base_1+"ло" ; --guessed
                               GPl => base_1+"ле" --guessed
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => base_1+"л" ;
                                  GSg Fem => base_1+"ла" ;
                                  GSg Neuter => base_1+"ло" ;
@@ -6999,7 +7001,8 @@ mkV003 base =
                                   GSg Neuter => base_1+"ило" ; --guessed
                                   GPl => base_1+"иле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7069,7 +7072,8 @@ mkV004 base =
                                   GSg Neuter => base_1+"ило" ; --guessed
                                   GPl => base_1+"иле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7139,13 +7143,14 @@ mkV005 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
                                      GPl => base_1+"еле"
                                    } ;
-                       perfect = \\_ => nonExist ;
+                       perfect = \\_ => base_1+"ено" ;
                        adjectival = \\_ => base_1+"ен" ;
                        adverbial = base_1+"ејќи" --guessed
                      } ;
@@ -7209,7 +7214,8 @@ mkV006 base =
                                   GSg Neuter => base_1+"ело" ; --guessed
                                   GPl => base_1+"еле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7279,7 +7285,8 @@ mkV007 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7349,7 +7356,8 @@ mkV008 base =
                                   GSg Neuter => base_1+"ило" ; --guessed
                                   GPl => base_1+"иле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ; --guessed
                                      GSg Fem => base_1+"ела" ; --guessed
                                      GSg Neuter => base_1+"ело" ;
@@ -7418,7 +7426,8 @@ mkV009 base_1 =
                               GSg Neuter => base_1+"ло" ;
                               GPl => base_1+"ле"
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => base_1+"л" ;
                                  GSg Fem => base_1+"ла" ;
                                  GSg Neuter => base_1+"ло" ;
@@ -7486,7 +7495,8 @@ mkV010 base =
                                   GSg Neuter => base_1+"ило" ; --guessed
                                   GPl => base_1+"иле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7556,7 +7566,8 @@ mkV011 base =
                                   GSg Neuter => base_1+"ло" ; --guessed
                                   GPl => base_1+"ле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7626,7 +7637,8 @@ mkV012 base =
                                   GSg Neuter => base_1+"ло" ; --guessed
                                   GPl => base_1+"ле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7695,13 +7707,14 @@ mkV013 base_1 =
                               GSg Neuter => base_1+"ло" ;
                               GPl => base_1+"ле"
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => base_1+"л" ;
                                  GSg Fem => base_1+"ла" ;
                                  GSg Neuter => base_1+"ло" ;
                                  GPl => base_1+"ле"
                                } ;
-                   perfect = \\_ => nonExist ;
+                   perfect = \\_ => base_1+"но" ;
                    adjectival = \\_ => base_1+"н" ;
                    adverbial = base_1+"јќи"
                  } ;
@@ -7763,7 +7776,8 @@ mkV014 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7833,7 +7847,8 @@ mkV015 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7903,7 +7918,8 @@ mkV016 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -7972,7 +7988,8 @@ mkV017 base_1 =
                               GSg Neuter => base_1+"ло" ;
                               GPl => base_1+"ле"
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => base_1+"л" ;
                                  GSg Fem => base_1+"ла" ;
                                  GSg Neuter => base_1+"ло" ;
@@ -8040,7 +8057,8 @@ mkV018 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"дел" ;
                                      GSg Fem => base_1+"дела" ;
                                      GSg Neuter => base_1+"дело" ;
@@ -8110,7 +8128,8 @@ mkV019 base =
                                   GSg Neuter => base_1+"гло" ;
                                   GPl => base_1+"гле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"зел" ;
                                      GSg Fem => base_1+"зела" ;
                                      GSg Neuter => base_1+"зело" ;
@@ -8180,7 +8199,8 @@ mkV020 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -8250,7 +8270,8 @@ mkV021 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -8320,7 +8341,8 @@ mkV022 base =
                                   GSg Neuter => base_1+"ло" ; --guessed
                                   GPl => base_1+"ле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -8390,7 +8412,8 @@ mkV023 base =
                                   GSg Neuter => base_1+"ало" ; --guessed
                                   GPl => base_1+"але" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -8460,7 +8483,8 @@ mkV024 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -8530,7 +8554,8 @@ mkV025 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"сел" ;
                                      GSg Fem => base_1+"села" ;
                                      GSg Neuter => base_1+"село" ;
@@ -8600,7 +8625,8 @@ mkV026 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"дел" ;
                                      GSg Fem => base_1+"дела" ;
                                      GSg Neuter => base_1+"дело" ;
@@ -8670,7 +8696,8 @@ mkV027 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"тел" ;
                                      GSg Fem => base_1+"тела" ;
                                      GSg Neuter => base_1+"тело" ;
@@ -8740,7 +8767,8 @@ mkV028 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -8810,7 +8838,8 @@ mkV029 base =
                                   GSg Neuter => base_1+"кло" ;
                                   GPl => base_1+"кле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"чел" ;
                                      GSg Fem => base_1+"чела" ;
                                      GSg Neuter => base_1+"чело" ;
@@ -8880,7 +8909,8 @@ mkV030 base =
                                   GSg Neuter => base_1+"кло" ;
                                   GPl => base_1+"кле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"чеел" ;
                                      GSg Fem => base_1+"чеела" ;
                                      GSg Neuter => base_1+"чеело" ;
@@ -8950,7 +8980,8 @@ mkV031 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9020,7 +9051,8 @@ mkV032 base =
                                   GSg Neuter => base_1+"ило" ; --guessed
                                   GPl => base_1+"иле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9090,7 +9122,8 @@ mkV033 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9160,7 +9193,8 @@ mkV034 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9230,7 +9264,8 @@ mkV035 base =
                                   GSg Neuter => base_1+"ало" ; --guessed
                                   GPl => base_1+"але" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9300,7 +9335,8 @@ mkV036 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9370,7 +9406,8 @@ mkV037 base =
                                   GSg Neuter => base_1+base_2+"ало" ;
                                   GPl => base_1+base_2+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"е"+base_2+"ел" ;
                                      GSg Fem => base_1+"е"+base_2+"ела" ;
                                      GSg Neuter => base_1+"е"+base_2+"ело" ;
@@ -9440,7 +9477,8 @@ mkV038 base =
                                   GSg Neuter => base_1+"гло" ;
                                   GPl => base_1+"гле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"зел" ;
                                      GSg Fem => base_1+"зела" ;
                                      GSg Neuter => base_1+"зело" ;
@@ -9510,7 +9548,8 @@ mkV039 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9580,7 +9619,8 @@ mkV040 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9650,7 +9690,8 @@ mkV041 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -9720,7 +9761,8 @@ mkV042 base =
                                   GSg Neuter => base_1+base_2+"ало" ;
                                   GPl => base_1+base_2+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"о"+base_2+"ел" ;
                                      GSg Fem => base_1+"о"+base_2+"ела" ;
                                      GSg Neuter => base_1+"о"+base_2+"ело" ;
@@ -9790,7 +9832,8 @@ mkV043 base =
                                   GSg Neuter => base_1+"ало" ; --guessed
                                   GPl => base_1+"але" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ; --guessed
                                      GSg Fem => base_1+"ела" ; --guessed
                                      GSg Neuter => base_1+"ело" ;
@@ -9859,7 +9902,8 @@ mkV044 base_1 =
                               GSg Neuter => base_1+"ло" ; --guessed
                               GPl => base_1+"ле" --guessed
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => base_1+"л" ;
                                  GSg Fem => base_1+"ла" ;
                                  GSg Neuter => base_1+"ло" ;
@@ -9927,7 +9971,8 @@ mkV045 base =
                                   GSg Neuter => base_1+"шло" ;
                                   GPl => base_1+"шле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"дел" ;
                                      GSg Fem => base_1+"дела" ;
                                      GSg Neuter => base_1+"дело" ;
@@ -9997,7 +10042,8 @@ mkV046 base =
                                   GSg Neuter => nonExist ;
                                   GPl => nonExist
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -10067,7 +10113,8 @@ mkV047 base =
                                   GSg Neuter => base_1+"ало" ; --guessed
                                   GPl => base_1+"але" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ; --guessed
                                      GSg Fem => base_1+"ела" ; --guessed
                                      GSg Neuter => base_1+"ело" ;
@@ -10137,7 +10184,8 @@ mkV048 base =
                                   GSg Neuter => base_1+"ло" ; --guessed
                                   GPl => base_1+"ле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -10207,7 +10255,8 @@ mkV049 base =
                                   GSg Neuter => base_1+"јало" ; --guessed
                                   GPl => base_1+"јале" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -10277,7 +10326,8 @@ mkV050 base =
                                   GSg Neuter => base_1+base_2+"ло" ;
                                   GPl => base_1+base_2+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+base_2+"л" ;
                                      GSg Fem => base_1+base_2+"ла" ;
                                      GSg Neuter => base_1+base_2+"ло" ;
@@ -10346,7 +10396,8 @@ mkV051 base_1 =
                               GSg Neuter => base_1+"ло" ;
                               GPl => base_1+"ле"
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => base_1+"л" ;
                                  GSg Fem => base_1+"ла" ;
                                  GSg Neuter => base_1+"ло" ;
@@ -10414,7 +10465,8 @@ mkV052 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -10484,7 +10536,8 @@ mkV053 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ; --guessed
                                      GSg Fem => base_1+"ела" ; --guessed
                                      GSg Neuter => base_1+"ело" ;
@@ -10554,7 +10607,8 @@ mkV054 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -10623,7 +10677,8 @@ mkV055 base_1 =
                               GSg Neuter => base_1+"ло" ;
                               GPl => base_1+"ле"
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => base_1+"л" ;
                                  GSg Fem => base_1+"ла" ;
                                  GSg Neuter => base_1+"ло" ;
@@ -10691,7 +10746,8 @@ mkV056 base =
                                   GSg Neuter => base_1+"шло" ;
                                   GPl => base_1+"шле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"јдел" ;
                                      GSg Fem => base_1+"јдела" ;
                                      GSg Neuter => base_1+"јдело" ;
@@ -10761,7 +10817,8 @@ mkV057 base =
                                   GSg Neuter => base_1+"ило" ; --guessed
                                   GPl => base_1+"иле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -10831,7 +10888,8 @@ mkV058 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -10901,7 +10959,8 @@ mkV059 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"мел" ;
                                      GSg Fem => base_1+"мела" ;
                                      GSg Neuter => base_1+"мело" ;
@@ -10971,7 +11030,8 @@ mkV060 base =
                                   GSg Neuter => base_1+"јало" ;
                                   GPl => base_1+"јале"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -11041,7 +11101,8 @@ mkV061 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ; --guessed
                                      GSg Fem => base_1+"ела" ; --guessed
                                      GSg Neuter => base_1+"ело" ;
@@ -11111,7 +11172,8 @@ mkV062 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -11181,7 +11243,8 @@ mkV063 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -11251,7 +11314,8 @@ mkV064 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -11321,7 +11385,8 @@ mkV065 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -11391,7 +11456,8 @@ mkV066 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -11461,7 +11527,8 @@ mkV067 base =
                                   GSg Neuter => base_1+base_2+"ало" ;
                                   GPl => base_1+base_2+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"те"+base_2+"ел" ;
                                      GSg Fem => base_1+"те"+base_2+"ела" ;
                                      GSg Neuter => base_1+"те"+base_2+"ело" ;
@@ -11531,7 +11598,8 @@ mkV068 base =
                                   GSg Neuter => base_1+"јало" ;
                                   GPl => base_1+"јале"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -11601,7 +11669,8 @@ mkV069 base =
                                   GSg Neuter => base_1+"шло" ;
                                   GPl => base_1+"шле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"јдел" ;
                                      GSg Fem => base_1+"јдела" ;
                                      GSg Neuter => base_1+"јдело" ;
@@ -11671,7 +11740,8 @@ mkV070 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -11741,7 +11811,8 @@ mkV071 base =
                                   GSg Neuter => base_1+"кало" ;
                                   GPl => base_1+"кале"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"чел" ;
                                      GSg Fem => base_1+"чела" ;
                                      GSg Neuter => base_1+"чело" ;
@@ -11811,7 +11882,8 @@ mkV072 base =
                                   GSg Neuter => base_1+"кало" ;
                                   GPl => base_1+"кале"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"чел" ;
                                      GSg Fem => base_1+"чела" ;
                                      GSg Neuter => base_1+"чело" ;
@@ -11881,7 +11953,8 @@ mkV073 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"иел" ;
                                      GSg Fem => base_1+"иела" ;
                                      GSg Neuter => base_1+"иело" ;
@@ -11951,7 +12024,8 @@ mkV074 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => base_1+"але"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"иел" ;
                                      GSg Fem => base_1+"иела" ;
                                      GSg Neuter => base_1+"иело" ;
@@ -12021,7 +12095,8 @@ mkV075 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => nonExist
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => nonExist ;
                                      GSg Fem => nonExist ;
                                      GSg Neuter => base_1+"ело" ;
@@ -12091,7 +12166,8 @@ mkV076 base =
                                   GSg Neuter => base_1+"јало" ;
                                   GPl => base_1+"јале"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -12161,7 +12237,8 @@ mkV077 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -12231,7 +12308,8 @@ mkV078 base =
                                   GSg Neuter => base_1+"ело" ;
                                   GPl => base_1+"еле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"иел" ;
                                      GSg Fem => base_1+"иела" ;
                                      GSg Neuter => base_1+"иело" ;
@@ -12301,7 +12379,8 @@ mkV079 base =
                                   GSg Neuter => base_1+"л"+base_2+"ло" ;
                                   GPl => base_1+"л"+base_2+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+base_2+"лел" ;
                                      GSg Fem => base_1+base_2+"лела" ;
                                      GSg Neuter => base_1+base_2+"лело" ;
@@ -12371,7 +12450,8 @@ mkV080 base =
                                   GSg Neuter => base_1+"јало" ;
                                   GPl => base_1+"јале"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -12441,7 +12521,8 @@ mkV081 base =
                                   GSg Neuter => base_1+"ало" ;
                                   GPl => nonExist
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => nonExist ;
                                      GSg Fem => nonExist ;
                                      GSg Neuter => base_1+"ело" ;
@@ -12511,7 +12592,8 @@ mkV082 base =
                                   GSg Neuter => base_1+"гло" ;
                                   GPl => base_1+"гле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"жел" ;
                                      GSg Fem => base_1+"жела" ;
                                      GSg Neuter => base_1+"жело" ;
@@ -12581,7 +12663,8 @@ mkV083 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле" --guessed
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ; --guessed
                                      GSg Fem => base_1+"ела" ; --guessed
                                      GSg Neuter => base_1+"ело" ;
@@ -12651,7 +12734,8 @@ mkV084 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -12721,7 +12805,8 @@ mkV085 base =
                                   GSg Neuter => base_1+"ило" ;
                                   GPl => base_1+"иле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -12791,7 +12876,8 @@ mkV086 base =
                                   GSg Neuter => base_1+"гло" ;
                                   GPl => base_1+"гле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"жел" ;
                                      GSg Fem => base_1+"жела" ;
                                      GSg Neuter => base_1+"жело" ;
@@ -12861,7 +12947,8 @@ mkV087 base =
                                   GSg Neuter => base_1+"шло" ;
                                   GPl => base_1+"шле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"дел" ;
                                      GSg Fem => base_1+"дела" ;
                                      GSg Neuter => base_1+"дело" ;
@@ -12931,7 +13018,8 @@ mkV088 base =
                                   GSg Neuter => base_1+"кло" ;
                                   GPl => base_1+"кле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"чел" ;
                                      GSg Fem => base_1+"чела" ;
                                      GSg Neuter => base_1+"чело" ;
@@ -13001,7 +13089,8 @@ mkV089 base =
                                   GSg Neuter => base_1+base_2+"фи"+base_3+"ло" ;
                                   GPl => base_1+base_2+"фи"+base_3+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+base_2+"фи"+base_3+"л" ;
                                      GSg Fem => base_1+base_2+"фи"+base_3+"ла" ;
                                      GSg Neuter => base_1+base_2+"фи"+base_3+"ло" ;
@@ -13070,7 +13159,8 @@ mkV090 base_1 =
                               GSg Neuter => base_1+"ло" ; --guessed
                               GPl => nonExist
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => nonExist ;
                                  GSg Fem => nonExist ;
                                  GSg Neuter => base_1+"ло" ;
@@ -13137,7 +13227,8 @@ mkV091 base_1 =
                               GSg Neuter => base_1+"ло" ; --guessed
                               GPl => nonExist
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => nonExist ;
                                  GSg Fem => nonExist ;
                                  GSg Neuter => base_1+"ло" ;
@@ -13205,7 +13296,8 @@ mkV092 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"тел" ;
                                      GSg Fem => base_1+"тела" ;
                                      GSg Neuter => base_1+"тело" ;
@@ -13275,7 +13367,8 @@ mkV093 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => "и"+base_1+"тел" ;
                                      GSg Fem => "и"+base_1+"тела" ;
                                      GSg Neuter => "и"+base_1+"тело" ;
@@ -13345,7 +13438,8 @@ mkV094 base =
                                   GSg Neuter => base_1+"ло" ;
                                   GPl => base_1+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -13415,7 +13509,8 @@ mkV097 base =
                                   GSg Neuter => base_1+"гало" ;
                                   GPl => base_1+"гале"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"жел" ;
                                      GSg Fem => base_1+"жела" ;
                                      GSg Neuter => base_1+"жело" ;
@@ -13485,7 +13580,8 @@ mkV098 base =
                                   GSg Neuter => base_1+"и"+base_2+"ло" ;
                                   GPl => base_1+"и"+base_2+"ле"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"и"+base_2+"л" ;
                                      GSg Fem => base_1+"и"+base_2+"ла" ;
                                      GSg Neuter => base_1+"и"+base_2+"ло" ;
@@ -13555,7 +13651,8 @@ mkV099 base =
                                   GSg Neuter => base_1+"јало" ;
                                   GPl => base_1+"јале"
                                 } ;
-                       imperfect = table {
+                       imperfect = \\_ =>
+                                   table {
                                      GSg Masc => base_1+"ел" ;
                                      GSg Fem => base_1+"ела" ;
                                      GSg Neuter => base_1+"ело" ;
@@ -13624,7 +13721,8 @@ mkV101 base_1 =
                               GSg Neuter => base_1+"ло" ;
                               GPl => nonExist
                             } ;
-                   imperfect = table {
+                   imperfect = \\_ =>
+                               table {
                                  GSg Masc => nonExist ;
                                  GSg Fem => nonExist ;
                                  GSg Neuter => base_1+"ло" ;
@@ -15376,7 +15474,7 @@ mkAdv base_1 =
   { s = base_1
   } ;
 
-mkPron : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> GenNum -> Person -> Pron =
+mkPron : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> GenNum -> Person -> Pronoun =
   \f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,g,p ->
       { s = table {
               RSubj => f1 ;
