@@ -5,6 +5,10 @@ oper Compl = {s : Str} ;
 param Species = Indef | Def Distance ;
 param Distance = Unspecified | Distal | Proximal ;
 param NRelType = Pref | AdjMod | AdvMod ;
+      NNumber =
+          NNum Number
+        | NCountable
+        ;
 param Gender = Masc | Fem | Neuter ;
 oper Noun = {s: Species => Number => Str; count_form: Str; vocative: Number => Str; rel: Species => GenNum => Str; relType : NRelType; g: Gender} ; -- 24855
 oper mkNoun : (_,_,_,_,_,_,_,_,_,_,_ : Str) -> Gender -> Noun =

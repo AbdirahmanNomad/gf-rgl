@@ -1124,13 +1124,13 @@ mkV2V = overload {
 } ;
 
 mkV2S = overload {
-  mkV2S : V -> V2S = \v -> lin V2S v ** {c2,c3=noPrep} ;
-  mkV2S : V -> Prep -> Prep -> V2S = \v,p2,p3 -> lin V2S v ** {c2=p2; c3=p3} ;
+  mkV2S : V -> V2S = \v -> lin V2S v ** {c2=noPrep} ;
+  mkV2S : V -> Prep -> V2S = \v,p2 -> lin V2S v ** {c2=p2} ;
 } ;
 
 mkV2Q = overload {
-  mkV2Q : V -> V2Q = \v -> lin V2Q v ** {c2,c3=noPrep} ;
-  mkV2Q : V -> Prep -> Prep -> V2Q = \v,p2,p3 -> lin V2Q v ** {c2=p2; c3=p3} ;
+  mkV2Q : V -> V2Q = \v -> lin V2Q v ** {c2=noPrep} ;
+  mkV2Q : V -> Prep -> V2Q = \v,p2 -> lin V2Q v ** {c2=p2} ;
 } ;
 
 mkV2A = overload {
@@ -1171,7 +1171,7 @@ mkIDet : Str -> IDet = \s -> lin IDet {s=s} ;
 mkMU : Str -> MU = \s -> lin MU {s=s; isPre = False} ;
 mkSubj : Str -> Subj = \s -> lin Subj {s=s} ;
 mkQuant : Str -> Quant = \s -> lin Quant {s=s; sp=Indef} ;
-mkDet : Str -> Det = \s -> lin Det {s=s; n=Sg; sp=Indef} ;
+mkDet : Str -> Det = \s -> lin Det {s=s; n=NNum Sg; sp=Indef} ;
 mkConj : Str -> Conj = \s -> lin Conj {s=s} ;
 mkPConj : Str -> PConj = \s -> lin PConj {s=s} ;
 mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;

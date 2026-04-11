@@ -30,9 +30,9 @@ linref A, A2 = \a -> a.s ! Indef ! GSg Masc ;
 
 lincat AP = {s : Species => GenNum => Str; isPre : Bool} ;
 lincat NP = {s : Role => Str; vocative: Str; g : GenNum; p : Person} ;
-lincat Num = {s : Str; n : Number} ;
+lincat Num = {s : Str; n : NNumber} ;
 lincat Quant = {s : Str; sp : Species} ;
-lincat Det = {s : Str; n : Number; sp : Species} ;
+lincat Det = {s : Str; n : NNumber; sp : Species} ;
 
 lincat VP = {present : Aspect => Number => Person => Str;
              aorist : Number => Person => Str;
