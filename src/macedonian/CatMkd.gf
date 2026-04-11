@@ -32,7 +32,7 @@ lincat AP = {s : Species => GenNum => Str; isPre : Bool} ;
 lincat NP = {s : Role => Str; vocative: Str; a : Agr} ;
 lincat Num = {s : Str; n : NNumber} ;
 lincat Quant = {s : GenNum => Str; sp : Species} ;
-lincat Det = {s : Gender => Str; n : NNumber; sp : Species} ;
+lincat Det, DAP = {s : Gender => Str; n : NNumber; sp : Species} ;
 
 lincat VP = Verb ** {compl : Agr => Str} ;
 lincat VPSlash = Verb ** {compl : Agr => Str; c2 : Compl} ;
