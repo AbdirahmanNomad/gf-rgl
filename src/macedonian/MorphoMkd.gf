@@ -15500,8 +15500,7 @@ mkPron : (_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ : Str) -> GenNum -> Person -> Pronoun =
                        }
             } ;
         poss_clitic = f15 ;
-        g = g ;
-        p = p ;
+        a = {g = g; p = p} ;
       } ;
 
 }

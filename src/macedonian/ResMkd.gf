@@ -1,6 +1,6 @@
 resource ResMkd = ParamX - [Tense] ** open Prelude in {
 
-oper Compl = {s : Str} ;
+oper Compl = {s : Str; c : Case} ;
 
 param Species = Indef | Def Distance ;
 param Distance = Unspecified | Distal | Proximal ;
@@ -10,6 +10,7 @@ param NRelType = Pref | AdjMod | AdvMod ;
         | NCountable
         ;
 param Gender = Masc | Fem | Neuter ;
+oper Agr = {g : GenNum; p : Person} ;
 oper Noun = {s: Species => Number => Str; count_form: Str; vocative: Number => Str; rel: Species => GenNum => Str; relType : NRelType; g: Gender} ; -- 24855
 oper mkNoun : (_,_,_,_,_,_,_,_,_,_,_ : Str) -> Gender -> Noun =
        \f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,g ->
@@ -171,8 +172,7 @@ oper Pronoun = {
         clitic : Case => Str;
         poss : Species => GenNum => Str ;
         poss_clitic : Str ;
-        g : GenNum;
-        p : Person
+        a : {g : GenNum; p : Person}
      } ;
 
 genNum : Gender -> Number -> GenNum = \g,n ->
@@ -274,4 +274,41 @@ auxHave = {
     }
 } ;
 
+mkClause : Str -> Agr -> Verb ** {compl : Agr => Str} -> Tense => Anteriority => Polarity => Order => Str
+   = \subj,agr,vp ->
+         let n = case agr.g of {
+                   GSg _ => Sg ;
+                   GPl   => Pl
+                 }
+         in \\t,a,p,o =>
+                case <t,a> of {
+                  <VPresent,Simul> => subj ++ neg ++ vp.present ! Imperfective ! n ! agr.p ++ li ++ vp.compl ! agr ;
+                  <VPresent,Anter> => case o of {
+                                        Main => subj ++ neg ++ auxBe.present ! n ! agr.p ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
+                                        Quest => subj ++ neg ++ vp.participle.imperfect ! Perfective ! agr.g ++ li ++ auxBe.present ! n ! agr.p ++ vp.compl ! agr
+                                      } ;
+                  <VPastSimple,Simul> => subj ++ neg ++ vp.aorist ! n ! agr.p ++ li ++ vp.compl ! agr ;
+                  <VPastSimple,Anter> => subj ++ neg ++ auxBe.imperfect ! n ! agr.p ++ li ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
+                  <VPastImperfect,Simul> => subj ++ neg ++ vp.imperfect ! Perfective ! n ! agr.p ++ li ++ vp.compl ! agr ;
+                  <VPastImperfect,Anter> => subj ++ neg ++ auxBe.imperfect ! n ! agr.p ++ li ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
+                  <VFut, Simul> => subj ++ fut.p1 ++ vp.present ! Perfective ! n ! agr.p ++ fut.p2 ++ vp.compl ! agr ;
+                  <VFut, Anter> => subj ++ fut.p1 ++ auxHave.present ! n ! agr.p ++ fut.p2 ++ vp.participle.perfect ! Perfective ++ vp.compl ! agr ;
+                  <VCond,Simul> => subj ++ neg ++ "би" ++ li ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
+                  <VCond,Anter> => subj ++ neg ++ "би" ++ li ++ auxHave.participle.imperfect ! agr.g ++ vp.participle.perfect ! Perfective ++ vp.compl ! agr
+                } where {
+                    neg = case p of {
+                            Pos => "" ;
+                            Neg => "не"
+                          } ;
+                    fut = case <p,o> of {
+                            <Pos,Main> => <"ке",[]> ;
+                            <Neg,Main> => <"нема да",[]> ;
+                            <Pos,Quest> => <"ке","ли"> ;
+                            <Neg,Quest> => <"нема ли да",[]>
+                          } ;
+                    li  = case o of {
+                            Main  => "" ;
+                            Quest => "ли"
+                          }
+                } ;
 }

@@ -1161,8 +1161,8 @@ mkInterj : Str -> Interj = \s -> lin Interj {s=s} ;
 
 mkVoc : Str -> Voc = \s -> lin Voc {s=s} ;
 
-mkPrep : Str -> Prep = \s -> lin Prep {s=s} ;
-noPrep : Prep = lin Prep {s=""} ;
+mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Acc} ;
+noPrep : Prep = lin Prep {s=""; c=Acc} ;
 
 mkIP : Str -> IP = \s -> lin IP {s=s} ;
 mkIAdv : Str -> IAdv = \s -> lin IAdv {s=s} ;

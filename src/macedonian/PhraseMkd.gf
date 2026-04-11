@@ -4,6 +4,7 @@ concrete PhraseMkd of Phrase = CatMkd ** open Prelude, ResMkd in {
     PhrUtt pconj utt voc = {s = pconj.s ++ utt.s ++ voc.s} ;
 
     UttS s = s ;
+    UttQS s = s ;
     UttInterj i = i ;
 
     NoPConj = {s = []} ;
