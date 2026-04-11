@@ -27,25 +27,20 @@ concrete NounMkd of Noun = CatMkd ** open Prelude,ResMkd in {
         vocative = \\n => cn.vocative ! n ++ adv.s;
         g = cn.g
       } ;
-  lin DefArt = {s = []; sp = Def Unspecified} ;
+  lin DefArt = {s = \\_=>[]; sp = Def Unspecified} ;
   lin DetCN det cn = {
         s = \\r => case det.n of {
-                     NNum n     => det.s ++ cn.s ! det.sp ! n;
-                     NCountable => det.s ++ cn.count_form
+                     NNum n     => det.s ! cn.g ++ cn.s ! det.sp ! n;
+                     NCountable => det.s ! cn.g ++ cn.count_form
                    } ;
-        vocative = case det.n of {
-                     NNum Sg => det.s ++ cn.vocative ! Sg;
-                     _       => det.s ++ cn.vocative ! Pl
-                   } ;
-        a = {g = case det.n of {
-                   NNum Sg => GSg cn.g;
-                   _       => GPl
-                 } ;
+        vocative = det.s ! cn.g ++ cn.vocative ! nnum2num det.n ;
+        a = {g = genNum cn.g (nnum2num det.n) ;
              p = P3};
       } ;
-  lin DetQuant det num = {s = det.s ++ num.s; n = num.n;
-                          sp = det.sp} ;
-  lin IndefArt = {s = []; sp = Indef} ;
+  lin DetQuant q num = {s = \\g => q.s ! genNum g (nnum2num num.n) ++ num.s;
+                        n = num.n;
+                        sp = q.sp} ;
+  lin IndefArt = {s = \\_=>[]; sp = Indef} ;
   lin NumPl = {s = []; n = NNum Pl} ;
   lin NumSg = {s = []; n = NNum Sg} ;
   lin UseN s = s ;

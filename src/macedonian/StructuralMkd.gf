@@ -1,4 +1,4 @@
-concrete StructuralMkd of Structural = CatMkd ** open ResMkd,MorphoMkd in {
+concrete StructuralMkd of Structural = CatMkd ** open ResMkd,MorphoMkd,ParadigmsMkd in {
 
 lin i_Pron = mkPron "јас" "мене" "ме" "мене" "ми" "мене" "мој" "мојот" "моја" "мојата" "мое" "моето" "мои" "моите" "ми" (GSg Masc) P1 ;
 lin youSg_Pron = mkPron "ти" "тебе" "те" "тебе" "ти" "тебе" "твој" "твојот" "твоја" "твојата" "твое" "твоето" "твои" "твоите" "ти" (GSg Masc) P2 ;
@@ -9,5 +9,7 @@ lin we_Pron = mkPron "ние" "нас" "нѐ" "нам" "ни" "нас" "наш" 
 lin youPl_Pron = mkPron "вие" "вас" "ве" "вам" "ви" "вас" "ваш" "вашиот" "ваша" "вашата" "ваше" "вашето" "ваши" "вашите" "ви" GPl P2 ;
 lin youPol_Pron = mkPron "вие" "вас" "ве" "вам" "ви" "вас" "ваш" "вашиот" "ваша" "вашата" "ваше" "вашето" "ваши" "вашите" "ви" (GSg Masc) P2 ;
 lin they_Pron = mkPron "тие" "нив" "ги" "ним" "им" "нив" "нивен" "нивниот" "нивна" "нивната" "нивно" "нивното" "нивни" "нивните" "им" GPl P3 ;
+lin this_Quant = mkQuant "овој" "оваа" "ова" "овие" ;
+lin that_Quant = mkQuant "тој" "таа" "тоа" "тие" ;
 
 }

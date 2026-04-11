@@ -1170,8 +1170,31 @@ mkIQuant : Str -> IQuant = \s -> lin IQuant {s=s} ;
 mkIDet : Str -> IDet = \s -> lin IDet {s=s} ;
 mkMU : Str -> MU = \s -> lin MU {s=s; isPre = False} ;
 mkSubj : Str -> Subj = \s -> lin Subj {s=s} ;
-mkQuant : Str -> Quant = \s -> lin Quant {s=s; sp=Indef} ;
-mkDet : Str -> Det = \s -> lin Det {s=s; n=NNum Sg; sp=Indef} ;
+mkQuant : Str -> Str -> Str -> Str -> Quant = \m,f,n,pl ->
+  lin Quant {
+    s=table {
+        GSg Masc   => m;
+        GSg Fem    => f;
+        GSg Neuter => n;
+        GPl        => pl
+      } ;
+    sp=Indef
+  } ;
+
+mkDet = overload {
+  mkDet : Str -> Det = \s -> lin Det {s=\\_=>s; n=NNum Pl; sp=Indef} ;
+  mkDet : Str -> Str -> Str -> Det = \m,f,n -> 
+    lin Det {
+      s=table {
+          Masc => m ;
+          Fem  => f ;
+          Neuter => n
+        } ;
+      n=NNum Sg;
+      sp=Indef
+    } ;
+} ;
+
 mkConj : Str -> Conj = \s -> lin Conj {s=s} ;
 mkPConj : Str -> PConj = \s -> lin PConj {s=s} ;
 mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;

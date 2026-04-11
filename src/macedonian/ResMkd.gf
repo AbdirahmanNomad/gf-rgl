@@ -180,6 +180,12 @@ genNum : Gender -> Number -> GenNum = \g,n ->
     Sg => GSg g ;
     Pl => GPl
   } ;
+  
+nnum2num : NNumber -> Number = \n ->
+  case n of {
+    NNum n => n ;
+    NCountable => Pl
+  } ;
 
 auxBe = {
   present : Number => Person => Str

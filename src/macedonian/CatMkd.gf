@@ -31,8 +31,8 @@ linref A, A2 = \a -> a.s ! Indef ! GSg Masc ;
 lincat AP = {s : Species => GenNum => Str; isPre : Bool} ;
 lincat NP = {s : Role => Str; vocative: Str; a : Agr} ;
 lincat Num = {s : Str; n : NNumber} ;
-lincat Quant = {s : Str; sp : Species} ;
-lincat Det = {s : Str; n : NNumber; sp : Species} ;
+lincat Quant = {s : GenNum => Str; sp : Species} ;
+lincat Det = {s : Gender => Str; n : NNumber; sp : Species} ;
 
 lincat VP = Verb ** {compl : Agr => Str} ;
 lincat VPSlash = Verb ** {compl : Agr => Str; c2 : Compl} ;
