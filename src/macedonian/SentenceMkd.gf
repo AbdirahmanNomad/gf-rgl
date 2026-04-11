@@ -1,12 +1,18 @@
 concrete SentenceMkd of Sentence = CatMkd ** open Prelude,ResMkd in {
-  lin AdvImp a i = {s = a.s ++ i.s} ;
+  lin AdvImp a i = {s = \\p,gn => a.s ++ i.s ! p ! gn} ;
   lin AdvS a s = {s = a.s ++ s.s} ;
   lin AdvSlash c a = {s = c.s ++ a.s} ;
   lin EmbedQS qs = {s = qs.s} ;
   lin EmbedS s = {s = s.s} ;
-  lin EmbedVP vp = {s = vp.present ! Imperfective ! Sg ! P1} ;
+  lin EmbedVP vp = {s = vp.present ! Perfective ! Sg ! P1} ;
   lin ExtAdvS a s = {s = a.s ++ s.s} ;
-  lin ImpVP vp = {s = vp.present ! Imperfective ! Sg ! P1} ;
+  lin ImpVP vp = {
+         s = \\p,gn=>case p of {
+                       Pos => vp.imperative ! Perfective ! genNum2num gn ;
+                       Neg => "не" ++ vp.imperative ! Imperfective ! genNum2num gn
+                     } ++
+                     vp.compl ! {g=gn; p=P2}
+      } ;
   lin PredSCVP sc vp = {s = \\t,a,p,o => sc.s
                                            ++ vp.present ! Imperfective ! Sg ! P1} ;
   lin PredVP np vp = {s = mkClause (np.s ! RSubj) np.a vp} ;

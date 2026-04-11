@@ -9,9 +9,9 @@ concrete PhraseMkd of Phrase = CatMkd ** open Prelude, ResMkd in {
   lin UttCard c = {s = c.s} ;
   lin UttIAdv i = {s = i.s} ;
   lin UttIP ip = {s = ip.s} ;
-  lin UttImpPl p i = {s = p.s ++ i.s} ;
-  lin UttImpPol p i = {s = p.s ++ i.s} ;
-  lin UttImpSg p i = {s = p.s ++ i.s} ;
+  lin UttImpPl p i = {s = p.s ++ i.s ! p.p ! GPl} ;
+  lin UttImpPol p i = {s = p.s ++ i.s ! p.p ! GPl} ;
+  lin UttImpSg p i = {s = p.s ++ i.s ! p.p ! GSg Masc} ;
   lin UttInterj i = i ;
   lin UttNP np = {s = np.s ! RSubj} ;
   lin UttQS s = s ;

@@ -187,6 +187,12 @@ nnum2num : NNumber -> Number = \n ->
     NCountable => Pl
   } ;
 
+genNum2num : GenNum -> Number = \gn ->
+  case gn of {
+    GSg _ => Sg ;
+    GPl   => Pl
+  } ;
+
 auxBe = {
   present : Number => Person => Str
           = table {
