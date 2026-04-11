@@ -11,5 +11,13 @@ lin youPol_Pron = mkPron "вие" "вас" "ве" "вам" "ви" "вас" "ва
 lin they_Pron = mkPron "тие" "нив" "ги" "ним" "им" "нив" "нивен" "нивниот" "нивна" "нивната" "нивно" "нивното" "нивни" "нивните" "им" GPl P3 ;
 lin this_Quant = mkQuant "овој" "оваа" "ова" "овие" ;
 lin that_Quant = mkQuant "тој" "таа" "тоа" "тие" ;
+lin how_IAdv = mkIAdv "как" ;
+lin how8many_IDet = mkIDet "колку" ;
+lin how8much_IAdv = mkIAdv "колку" ;
+lin when_IAdv = mkIAdv "кога" ;
+lin where_IAdv = mkIAdv "каде" ;
+lin which_IQuant = mkIQuant "кој" "која" "кое" "кои" ;
+lin whoSg_IP = mkIP "кој" (GSg Masc) ;
+lin whoPl_IP = mkIP "кои" GPl ;
 
 }

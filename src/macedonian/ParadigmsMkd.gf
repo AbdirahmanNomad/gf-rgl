@@ -1164,12 +1164,35 @@ mkVoc : Str -> Voc = \s -> lin Voc {s=s} ;
 mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Acc} ;
 noPrep : Prep = lin Prep {s=""; c=Acc} ;
 
-mkIP : Str -> IP = \s -> lin IP {s=s} ;
+mkIP : Str -> GenNum -> IP = \s,g -> lin IP {s=s; g=g} ;
 mkIAdv : Str -> IAdv = \s -> lin IAdv {s=s} ;
-mkIQuant : Str -> IQuant = \s -> lin IQuant {s=s} ;
-mkIDet : Str -> IDet = \s -> lin IDet {s=s} ;
+
+mkIQuant : Str -> Str -> Str -> Str -> IQuant = \m,f,n,pl ->
+  lin IQuant {
+    s=table {
+        GSg Masc   => m;
+        GSg Fem    => f;
+        GSg Neuter => n;
+        GPl        => pl
+      }
+  } ;
+
+mkIDet = overload {
+  mkIDet : Str -> IDet = \s -> lin IDet {s=\\_=>s; n=Pl} ;
+  mkIDet : Str -> Str -> Str -> IDet = \m,f,n ->
+    lin IDet {
+      s=table {
+          Masc => m ;
+          Fem  => f ;
+          Neuter => n
+        } ;
+      n=Sg;
+    } ;
+} ;
+
 mkMU : Str -> MU = \s -> lin MU {s=s; isPre = False} ;
 mkSubj : Str -> Subj = \s -> lin Subj {s=s} ;
+
 mkQuant : Str -> Str -> Str -> Str -> Quant = \m,f,n,pl ->
   lin Quant {
     s=table {
@@ -1183,7 +1206,7 @@ mkQuant : Str -> Str -> Str -> Str -> Quant = \m,f,n,pl ->
 
 mkDet = overload {
   mkDet : Str -> Det = \s -> lin Det {s=\\_=>s; n=NNum Pl; sp=Indef} ;
-  mkDet : Str -> Str -> Str -> Det = \m,f,n -> 
+  mkDet : Str -> Str -> Str -> Det = \m,f,n ->
     lin Det {
       s=table {
           Masc => m ;

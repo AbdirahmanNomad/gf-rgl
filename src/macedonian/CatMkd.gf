@@ -42,7 +42,9 @@ lincat Cl = {s : ResMkd.Tense => Anteriority => Polarity => Order => Str} ;
 lincat QCl = {s : ResMkd.Tense => Anteriority => Polarity => Str} ;
 lincat RCl = {s : GenNum => ResMkd.Tense => Anteriority => Polarity => Str} ;
 lincat RP = {s : GenNum => Str} ;
-lincat IP = {s : Str} ;
+lincat IP = {s : Str; g : GenNum} ;
+lincat IQuant = {s : GenNum => Str} ;
+lincat IDet = {s : Gender => Str; n : Number} ;
 lincat Subj = {s : Str} ;
 
 }
