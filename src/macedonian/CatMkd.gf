@@ -47,5 +47,6 @@ lincat IQuant = {s : GenNum => Str} ;
 lincat IDet = {s : Gender => Str; n : Number} ;
 lincat Subj = {s : Str} ;
 lincat Imp = {s : Polarity => GenNum => Str} ;
+lincat Comp = {s : GenNum => Str} ;
 
 }
