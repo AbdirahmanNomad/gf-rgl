@@ -162,7 +162,14 @@ oper mkAdv : Str -> Adv =
 
 param Case = Acc | Dat ;
 param Role = RSubj | RObj Case | RPrep ;
-oper Pronoun = {s : Role => Str; clitic : Case => Str; g : GenNum; p : Person} ;
+oper Pronoun = {
+        s : Role => Str;
+        clitic : Case => Str;
+        poss : Species => GenNum => Str ;
+        poss_clitic : Str ;
+        g : GenNum;
+        p : Person
+     } ;
 
 genNum : Gender -> Number -> GenNum = \g,n ->
   case n of {
