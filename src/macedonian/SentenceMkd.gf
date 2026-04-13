@@ -4,7 +4,7 @@ concrete SentenceMkd of Sentence = CatMkd ** open Prelude,ResMkd in {
   lin AdvSlash c a = {s = c.s ++ a.s} ;
   lin EmbedQS qs = {s = qs.s} ;
   lin EmbedS s = {s = s.s} ;
-  lin EmbedVP vp = {s = vp.present ! Perfective ! Sg ! P1} ;
+  lin EmbedVP vp = {s = "да" ++ vp.present ! Perfective ! Sg ! P3 ++ vp.compl ! {g=GSg Masc; p=P3}} ;
   lin ExtAdvS a s = {s = a.s ++ s.s} ;
   lin ImpVP vp = {
          s = \\p,gn=>case p of {
