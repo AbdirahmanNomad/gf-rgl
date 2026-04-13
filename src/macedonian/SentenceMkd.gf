@@ -18,13 +18,13 @@ concrete SentenceMkd of Sentence = CatMkd ** open Prelude,ResMkd in {
   lin PredVP np vp = {s = mkClause (np.s ! RSubj) np.a vp} ;
   lin RelS s rs = {s = s.s ++ rs.s ! GSg Masc} ;
   lin SSubjS s s2 s3 = {s = s.s ++ s2.s ++ s3.s} ;
-  lin SlashPrep cl p = {s = cl.s ! VPresent ! Simul ! Pos ! Main
+  lin SlashPrep cl p = {s = cl.s ! Main ! VPresent ! Simul ! Pos
                               ++ p.s} ;
   lin SlashVP np v = {s = np.s ! RSubj
                             ++ v.present ! Imperfective ! Sg ! np.a.p} ;
   lin SlashVS np vs s = {s = np.s ! RSubj
                                ++ vs.present ! Imperfective ! Sg ! np.a.p ++ s.s} ;
-  lin UseCl t p cl = {s = t.s ++ p.s ++ cl.s ! t.t ! t.a ! p.p ! Main} ;
+  lin UseCl t p cl = {s = t.s ++ p.s ++ cl.s ! Main ! t.t ! t.a ! p.p} ;
   lin UseQCl t p cl = {s = t.s ++ p.s ++ cl.s ! t.t ! t.a ! p.p} ;
   lin UseRCl t p cl = {s = \\gn => t.s ++ p.s ++ cl.s ! gn ! t.t ! t.a ! p.p} ;
   lin UseSlash t p c = {s = t.s ++ p.s ++ c.s} ;

@@ -38,7 +38,7 @@ lincat VP = Verb ** {compl : Agr => Str} ;
 lincat VPSlash = Verb ** {compl : Agr => Str; c2 : Compl} ;
 lincat S,QS = {s : Str} ;
 lincat RS = {s : GenNum => Str} ;
-lincat Cl = {s : ResMkd.Tense => Anteriority => Polarity => Order => Str} ;
+lincat Cl = {s : Order => ResMkd.Tense => Anteriority => Polarity => Str} ;
 lincat QCl = {s : ResMkd.Tense => Anteriority => Polarity => Str} ;
 lincat RCl = {s : GenNum => ResMkd.Tense => Anteriority => Polarity => Str} ;
 lincat RP = {s : GenNum => Str} ;

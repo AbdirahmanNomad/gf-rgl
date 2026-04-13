@@ -95,8 +95,8 @@ concrete NounMkd of Noun = CatMkd ** open Prelude,ResMkd in {
       } ;
   lin OrdDigits d = {s = d.s} ;
   lin OrdNumeral n = {s = n.s} ;
-  lin OrdNumeralSuperl n a = {s = n.s ++ a.s ! Indef ! GSg Masc} ;
-  lin OrdSuperl a = {s = a.s ! Indef ! GSg Masc} ;
+  lin OrdNumeralSuperl n a = {s = n.s ++ "нај" ++ BIND ++ a.s ! Indef ! GSg Masc} ;
+  lin OrdSuperl a = {s = "нај" ++ BIND ++ a.s ! Indef ! GSg Masc} ;
   lin PPartNP np v2 = {s = \\r => np.s ! r
                                     ++ v2.present ! Imperfective ! Sg ! np.a.p;
                        vocative = np.vocative ++ v2.present ! Imperfective ! Sg ! np.a.p;

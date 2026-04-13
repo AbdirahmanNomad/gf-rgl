@@ -7,9 +7,9 @@ concrete RelativeMkd of Relative = CatMkd ** open Prelude,ResMkd in {
                     GPl => "кои"
                   }
              } ;
-  lin RelCl cl = {s = \\g,t,a,p => cl.s ! t ! a ! p ! Main} ;
+  lin RelCl cl = {s = \\g => cl.s ! Main} ;
   lin RelSlash rp c = {s = \\g,t,a,p => rp.s ! g ++ c.s} ;
   lin RelVP rp vp = {
-        s = \\gn,t,a,p => mkClause (rp.s ! gn) {g=gn; p=P3} vp ! t ! a ! p ! Main
+        s = \\gn => mkClause (rp.s ! gn) {g=gn; p=P3} vp ! Main
       } ;
 }

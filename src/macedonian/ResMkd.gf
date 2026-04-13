@@ -286,13 +286,13 @@ auxHave = {
     }
 } ;
 
-mkClause : Str -> Agr -> Verb ** {compl : Agr => Str} -> Tense => Anteriority => Polarity => Order => Str
+mkClause : Str -> Agr -> Verb ** {compl : Agr => Str} -> Order => Tense => Anteriority => Polarity => Str
    = \subj,agr,vp ->
          let n = case agr.g of {
                    GSg _ => Sg ;
                    GPl   => Pl
                  }
-         in \\t,a,p,o =>
+         in \\o,t,a,p =>
                 case <t,a> of {
                   <VPresent,Simul> => subj ++ neg ++ vp.present ! Imperfective ! n ! agr.p ++ li ++ vp.compl ! agr ;
                   <VPresent,Anter> => case o of {
