@@ -475,7 +475,7 @@ oper
   mkIQuant : Str -> IQuant = \s -> lin IQuant {s=s} ;
   mkIDet : Str -> IDet = \s -> lin IDet {s=s} ;
   mkSubj : Str -> Subj = \s -> lin Subj {s=s} ;
-  mkQuant : Str -> Quant = \s -> lin Quant {s=s} ;
+  mkQuant : Str -> Quant = \s -> lin Quant {s=s; sp=Indef} ;
   mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;
   mkCard : Str -> Card = \s -> lin Card {s=s} ;
   mkConj : Str -> Conj = \s -> lin Conj {s=s} ;
