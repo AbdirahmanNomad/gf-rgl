@@ -11,7 +11,7 @@ concrete NounHye of Noun = CatHye ** open ResHye in {
   lin IndefArt = {s = []; sp = Indef} ;
   lin NumPl = {s = []; n = Pl} ;
   lin NumSg = {s = []; n = Sg} ;
-  lin PossPron pron = {s = pron.s; sp = Poss pron.a.p} ;
+  lin PossPron pron = {s = pron.empty; sp = Poss pron.a.p} ;
   lin UseN n = n ** {
         s = \\sp,c,num =>
                 case <sp,c> of {
@@ -22,4 +22,5 @@ concrete NounHye of Noun = CatHye ** open ResHye in {
                   _         => n.s ! c ! num
                 }
       } ;
+  lin UsePron pron = {s = \\c => pron.s; a=pron.a} ;
 }

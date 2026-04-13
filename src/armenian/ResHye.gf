@@ -1,8 +1,6 @@
-resource ResHye = {
+resource ResHye = ParamX ** {
 
 param Aspect = Non_Past | Perfect ;
-param Person = P1 | P3 | P2 ;
-param Number = Sg | Pl ;
 param Case = Nom | Dat | Ablat | Instr | Loc ;
 param PartType = Resultative | Subject ;
 oper Verb = {s: Str; causative: Str; conditional: Aspect => Person => Number => Str; converb: {imperfective: Str; futCon1: Str; futCon2: Str; negative: Str; perfective: Str; simultaneous: Str}; imperative: Number => Str; passive: Str; past: Person => Number => Str; participle: PartType => Str; subjunctive: Aspect => Person => Number => Str} ; -- 898

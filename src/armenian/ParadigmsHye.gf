@@ -487,4 +487,10 @@ oper
   mkSN : Str -> SN = \s -> lin SN {s=s} ;
   mkPN : Str -> PN = \s -> lin PN {s=s} ;
 
+  mkPron : Str -> Number -> Person -> Pron = \s,n,p -> 
+    lin Pron {
+      s = s ;
+      empty = [] ;
+      a = {n = n; p = p}
+    } ;
 }
