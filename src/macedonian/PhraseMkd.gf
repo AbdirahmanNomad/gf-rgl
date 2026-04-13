@@ -16,6 +16,6 @@ concrete PhraseMkd of Phrase = CatMkd ** open Prelude, ResMkd in {
   lin UttNP np = {s = np.s ! RSubj} ;
   lin UttQS s = s ;
   lin UttS s = s ;
-  lin UttVP vp = {s = vp.present ! Imperfective ! Sg ! P1} ;
+  lin UttVP vp = {s = "да" ++ vp.present ! Perfective ! Sg ! P3 ++ vp.compl ! {g=GSg Masc; p=P3}} ;
   lin VocNP np = {s : Str = SOFT_BIND ++ "," ++ np.vocative} ;
 }
