@@ -21,5 +21,9 @@ lin where_IAdv = mkIAdv "каде" ;
 lin which_IQuant = mkIQuant "кој" "која" "кое" "кои" ;
 lin whoSg_IP = mkIP "кој" (GSg Masc) ;
 lin whoPl_IP = mkIP "кои" GPl ;
+lin and_Conj = mkConj "и" Pl ;
+lin or_Conj = mkConj "или" Sg ;
+lin both7and_DConj = mkConj "и" Pl ** {sep=0} ;
+lin either7or_DConj = mkConj "или" Sg ** {sep=1} ;
 
 }
