@@ -1,6 +1,4 @@
 concrete NamesMkd of Names = CatMkd ** open Prelude,ResMkd in {
-  flags
-    coding = "UTF-8" ;
   lin AdjLN ap ln = {s = ap.s ! Indef ! GSg Masc ++ ln.s} ;
   lin FemaleSurname sn = {s = \\r => sn.s; vocative = sn.s;
                           a = {g = GSg Masc; p = P1}} ;

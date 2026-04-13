@@ -1,6 +1,4 @@
 concrete CatSqi of Cat = CommonX ** open ParamX,Prelude,ResSqi in {
-  flags
-    coding = "UTF-8" ;
   lincat A = Adj ;
   lincat A2 = Adj ** {c2 : Compl} ;
   lincat V, VA, VV, VS, VQ = Verb ;
