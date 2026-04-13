@@ -1,4 +1,4 @@
-concrete CatMkd of Cat = CommonX - [Temp,Tense] ** open ParamX, ResMkd, Prelude in {
+concrete CatMkd of Cat = CommonX - [Temp,Tense] ** open ParamX, ResMkd, Prelude, Predef in {
 
 lincat
   Temp  = {s : Str ; t : ResMkd.Tense ; a : Anteriority} ;
@@ -48,5 +48,7 @@ lincat IDet = {s : Gender => Str; n : Number} ;
 lincat Subj = {s : Str} ;
 lincat Imp = {s : Polarity => GenNum => Str} ;
 lincat Comp = {s : GenNum => Str} ;
+
+lincat Conj = {s : Str; sep : Ints 3; n : Number} ;
 
 }

@@ -1218,7 +1218,9 @@ mkDet = overload {
     } ;
 } ;
 
-mkConj : Str -> Conj = \s -> lin Conj {s=s} ;
+mkConj : Str -> Number -> Conj = 
+  \s,n -> lin Conj {s = s; sep = 3; n = n} ;
+
 mkPConj : Str -> PConj = \s -> lin PConj {s=s} ;
 mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;
 mkCAdv : Str -> CAdv = \s -> lin CAdv {s=s; p=""} ;

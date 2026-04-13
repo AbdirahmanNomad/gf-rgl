@@ -1,4 +1,4 @@
-resource ResMkd = ParamX - [Tense] ** open Prelude in {
+resource ResMkd = ParamX - [Tense] ** open Prelude, Predef in {
 
 oper Compl = {s : Str; c : Case} ;
 
@@ -175,6 +175,12 @@ oper Pronoun = {
         a : {g : GenNum; p : Person}
      } ;
 
+conjGenNum : GenNum -> GenNum -> GenNum = \a,b ->
+  case <a,b> of {
+    <GSg _,GSg g> => GSg g ;
+    _             => GPl
+  } ;
+
 genNum : Gender -> Number -> GenNum = \g,n ->
   case n of {
     Sg => GSg g ;
@@ -323,4 +329,8 @@ mkClause : Str -> Agr -> Verb ** {compl : Agr => Str} -> Order => Tense => Anter
                             Quest => "ли"
                           }
                 } ;
+
+linCoord : Str -> Ints 4 => Str ;
+linCoord comma = table {0 => "и"; 1=>"или"; 2=>"нито"; 3=>comma; 4=>[]} ;
+
 }
