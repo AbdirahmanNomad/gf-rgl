@@ -469,6 +469,9 @@ oper
   mkMU : Str -> MU = \s -> lin MU {s=s; isPre=False} ;
 
   mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Dat} ;
+  
+  singular : Number = Sg ;
+  plural : Number = Pl ;
 
   mkIAdv : Str -> IAdv = \s -> lin IAdv {s=s} ;
   mkIP : Str -> IP = \s -> lin IP {s=s} ;
@@ -476,6 +479,7 @@ oper
   mkIDet : Str -> IDet = \s -> lin IDet {s=s} ;
   mkSubj : Str -> Subj = \s -> lin Subj {s=s} ;
   mkQuant : Str -> Quant = \s -> lin Quant {s=s; sp=Indef} ;
+  mkDet : Str -> Number -> Det = \s,n -> lin Det {s=s; n=n; sp=Indef} ;
   mkPredet : Str -> Predet = \s -> lin Predet {s=s} ;
   mkCard : Str -> Card = \s -> lin Card {s=s} ;
   mkConj : Str -> Conj = \s -> lin Conj {s=s} ;
