@@ -2,7 +2,7 @@ concrete CatHye of Cat = CommonX ** open Prelude,ResHye in {
   lincat A = Adj ;
   lincat A2 = Adj ** {c2 : Compl} ;
   lincat ACard = {s : Str} ;
-  lincat AP = {} ;
+  lincat AP = Adj ;
   lincat CN = {s : Species => Case => Number => Str;
                poss1 : Case => Number => Str;
                poss2 : Case => Number => Str} ;
