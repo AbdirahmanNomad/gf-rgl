@@ -331,6 +331,6 @@ mkClause : Str -> Agr -> Verb ** {compl : Agr => Str} -> Order => Tense => Anter
                 } ;
 
 linCoord : Str -> Ints 4 => Str ;
-linCoord comma = table {0 => "и"; 1=>"или"; 2=>"нито"; 3=>comma; 4=>[]} ;
+linCoord comma = table {0 => "и"; 1=>"или"; 2=>"ниту"; 3=>comma; 4=>[]} ;
 
 }
