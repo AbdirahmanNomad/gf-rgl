@@ -1,4 +1,4 @@
-concrete StructuralHye of Structural = CatHye ** open ResMkd, ParadigmsHye in {
+concrete StructuralHye of Structural = CatHye ** open ResHye, ParadigmsHye in {
 lin i_Pron = mkPron "ես" Sg P1 ;
 lin youSg_Pron = mkPron "դու" Sg P2 ;
 lin he_Pron, she_Pron, it_Pron = mkPron "նա" Sg P3 ;
