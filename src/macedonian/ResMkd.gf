@@ -300,19 +300,19 @@ mkClause : Str -> Agr -> Verb ** {compl : Agr => Str} -> Order => Tense => Anter
                  }
          in \\o,t,a,p =>
                 case <t,a> of {
-                  <VPresent,Simul> => subj ++ neg ++ vp.present ! Imperfective ! n ! agr.p ++ li ++ vp.compl ! agr ;
+                  <VPresent,Simul> => subj ++ neg ++ se ++ vp.present ! Imperfective ! n ! agr.p ++ li ++ vp.compl ! agr ;
                   <VPresent,Anter> => case o of {
-                                        Main => subj ++ neg ++ auxBe.present ! n ! agr.p ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
-                                        Quest => subj ++ neg ++ vp.participle.imperfect ! Perfective ! agr.g ++ li ++ auxBe.present ! n ! agr.p ++ vp.compl ! agr
+                                        Main => subj ++ neg ++ auxBe.present ! n ! agr.p ++ se ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
+                                        Quest => subj ++ neg ++ se ++ vp.participle.imperfect ! Perfective ! agr.g ++ li ++ auxBe.present ! n ! agr.p ++ vp.compl ! agr
                                       } ;
-                  <VPastSimple,Simul> => subj ++ neg ++ vp.aorist ! n ! agr.p ++ li ++ vp.compl ! agr ;
-                  <VPastSimple,Anter> => subj ++ neg ++ auxBe.imperfect ! n ! agr.p ++ li ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
-                  <VPastImperfect,Simul> => subj ++ neg ++ vp.imperfect ! Perfective ! n ! agr.p ++ li ++ vp.compl ! agr ;
-                  <VPastImperfect,Anter> => subj ++ neg ++ auxBe.imperfect ! n ! agr.p ++ li ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
-                  <VFut, Simul> => subj ++ fut.p1 ++ vp.present ! Perfective ! n ! agr.p ++ fut.p2 ++ vp.compl ! agr ;
-                  <VFut, Anter> => subj ++ fut.p1 ++ auxHave.present ! n ! agr.p ++ fut.p2 ++ vp.participle.perfect ! Perfective ++ vp.compl ! agr ;
-                  <VCond,Simul> => subj ++ neg ++ "би" ++ li ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
-                  <VCond,Anter> => subj ++ neg ++ "би" ++ li ++ auxHave.participle.imperfect ! agr.g ++ vp.participle.perfect ! Perfective ++ vp.compl ! agr
+                  <VPastSimple,Simul> => subj ++ neg ++ se ++ vp.aorist ! n ! agr.p ++ li ++ vp.compl ! agr ;
+                  <VPastSimple,Anter> => subj ++ neg ++ se ++ auxBe.imperfect ! n ! agr.p ++ li ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
+                  <VPastImperfect,Simul> => subj ++ neg ++ se ++ vp.imperfect ! Perfective ! n ! agr.p ++ li ++ vp.compl ! agr ;
+                  <VPastImperfect,Anter> => subj ++ neg ++ se ++ auxBe.imperfect ! n ! agr.p ++ li ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
+                  <VFut, Simul> => subj ++ fut.p1 ++ se ++ vp.present ! Perfective ! n ! agr.p ++ fut.p2 ++ vp.compl ! agr ;
+                  <VFut, Anter> => subj ++ fut.p1 ++ se ++ auxHave.present ! n ! agr.p ++ fut.p2 ++ vp.participle.perfect ! Perfective ++ vp.compl ! agr ;
+                  <VCond,Simul> => subj ++ neg ++ "би" ++ li ++ se ++ vp.participle.imperfect ! Perfective ! agr.g ++ vp.compl ! agr ;
+                  <VCond,Anter> => subj ++ neg ++ "би" ++ li ++ auxHave.participle.imperfect ! agr.g ++ se ++ vp.participle.perfect ! Perfective ++ vp.compl ! agr
                 } where {
                     neg = case p of {
                             Pos => "" ;
@@ -327,6 +327,11 @@ mkClause : Str -> Agr -> Verb ** {compl : Agr => Str} -> Order => Tense => Anter
                     li  = case o of {
                             Main  => "" ;
                             Quest => "ли"
+                          } ;
+                    se  = case vp.vtype of {
+                            VNormal     => "" ;
+                            VMedial Acc => "се" ;
+                            VMedial Dat => "си"
                           }
                 } ;
 
