@@ -11,8 +11,9 @@ concrete VerbMkd of Verb = CatMkd ** open Prelude,ResMkd in {
                                   perfect = \\a2 => a.s ++ vp.participle.perfect ! a2;
                                   adjectival = \\a2 => a.s ++ vp.participle.adjectival ! a2;
                                   adverbial = a.s ++ vp.participle.adverbial};
-                    noun_from_verb = a.s ++ vp.noun_from_verb; vtype = vp.vtype;
-                    compl = \\v => a.s ++ vp.compl ! {g = GSg Masc; p = P1}} ;
+                    noun_from_verb = a.s ++ vp.noun_from_verb;
+                    vtype = vp.vtype;
+                    compl = vp.compl} ;
   lin AdVVPSlash a v = {present = \\a2,n,p => a.s
                                                 ++ v.present ! a2 ! n ! p;
                         aorist = \\n,p => a.s ++ v.aorist ! n ! p;
@@ -24,9 +25,10 @@ concrete VerbMkd of Verb = CatMkd ** open Prelude,ResMkd in {
                                       perfect = \\a2 => a.s ++ v.participle.perfect ! a2;
                                       adjectival = \\a2 => a.s ++ v.participle.adjectival ! a2;
                                       adverbial = a.s ++ v.participle.adverbial};
-                        noun_from_verb = a.s ++ v.noun_from_verb; vtype = v.vtype;
-                        compl = \\v2 => a.s ++ v.compl ! {g = GSg Masc; p = P1};
-                        c2 = {s = a.s ++ v.c2.s; c = v.c2.c}} ;
+                        noun_from_verb = a.s ++ v.noun_from_verb;
+                        vtype = v.vtype;
+                        compl = v.compl;
+                        c2 = v.c2} ;
   lin AdvVP vp adv = vp ** {compl = \\a => vp.compl ! a ++ adv.s} ;
   lin AdvVPSlash vps adv = vps ** {compl = \\a => vps.compl ! a ++ adv.s} ;
   lin CompAP ap = {s = \\gn => ap.s ! Indef ! gn} ;
