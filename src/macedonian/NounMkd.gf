@@ -68,8 +68,11 @@ concrete NounMkd of Noun = CatMkd ** open Prelude,ResMkd in {
   lin DetQuant q num = {s = \\g => q.s ! genNum g (nnum2num num.n) ++ num.s;
                         n = num.n;
                         sp = q.sp} ;
-  lin DetQuantOrd q n o = {s = \\g => q.s ! GSg Masc ++ n.s ++ o.s;
-                           n = n.n; sp = q.sp} ;
+  lin DetQuantOrd q n o = {
+        s = \\g => q.s ! GSg Masc ++ n.s ++ o.s ! q.sp ! genNum g (nnum2num n.n);
+        n = n.n;
+        sp = Indef
+      } ;
   lin ExtAdvNP np a = {
         s = \\r => np.s ! r ++ SOFT_BIND++"," ++ a.s;
         vocative = np.vocative ++ SOFT_BIND++"," ++ a.s;
@@ -93,10 +96,10 @@ concrete NounMkd of Noun = CatMkd ** open Prelude,ResMkd in {
         vocative = np.vocative ++ rs.s ! np.a.g ;
         a = np.a;
       } ;
-  lin OrdDigits d = {s = d.s} ;
-  lin OrdNumeral n = {s = n.s} ;
-  lin OrdNumeralSuperl n a = {s = n.s ++ "нај" ++ BIND ++ a.s ! Indef ! GSg Masc} ;
-  lin OrdSuperl a = {s = "нај" ++ BIND ++ a.s ! Indef ! GSg Masc} ;
+  lin OrdDigits d = {s = \\s,gn => d.s} ;
+  lin OrdNumeral n = {s = \\s,gn => n.s} ;
+  lin OrdNumeralSuperl n a = {s = \\s,gn => n.s ++ "нај" ++ BIND ++ a.s ! s ! gn} ;
+  lin OrdSuperl a = {s = \\s,gn => "нај" ++ BIND ++ a.s ! s ! gn} ;
   lin PPartNP np v2 = {s = \\r => np.s ! r
                                     ++ v2.present ! Imperfective ! Sg ! np.a.p;
                        vocative = np.vocative ++ v2.present ! Imperfective ! Sg ! np.a.p;

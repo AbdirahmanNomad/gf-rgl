@@ -2,7 +2,7 @@ concrete AdjectiveMkd of Adjective = CatMkd ** open Prelude,ResMkd in {
 
   lin AdAP a ap = {s = \\s,g => a.s ++ ap.s ! s ! g;
                    isPre = ap.isPre} ;
-  lin AdjOrd o = {s = \\s,g => o.s; isPre = False} ;
+  lin AdjOrd o = {s = o.s; isPre = False} ;
   lin AdvAP ap adv = {
         s = \\s,g => ap.s ! s ! g ++ adv.s;
         isPre = False
