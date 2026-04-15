@@ -104,9 +104,12 @@ concrete NounMkd of Noun = CatMkd ** open Prelude,ResMkd in {
   lin PartNP cn np = {s = \\s,n => cn.s ! s ! n ++ np.s ! RSubj;
                       count_form = cn.count_form ++ np.s ! RSubj;
                       vocative = \\n => cn.vocative ! n ++ np.vocative; g = cn.g} ;
-  lin PossNP cn np = {s = \\s,n => cn.s ! s ! n ++ np.s ! RSubj;
-                      count_form = cn.count_form ++ np.s ! RSubj;
-                      vocative = \\n => cn.vocative ! n ++ np.vocative; g = cn.g} ;
+  lin PossNP cn np = {
+        s = \\s,n => cn.s ! s ! n ++ "на" ++ np.s ! RObj Acc;
+        count_form = cn.count_form ++ "на" ++ np.s ! RObj Acc;
+        vocative = \\n => cn.vocative ! n ++ "на" ++ np.s ! RObj Acc;
+        g = cn.g
+      } ;
   lin PossPron p = {s = p.poss ! Def Unspecified; sp = Indef} ;
   lin PredetNP p np = {
         s = \\r => p.s ++ np.s ! r;
