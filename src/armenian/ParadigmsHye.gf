@@ -468,7 +468,7 @@ oper
   mkInterj : Str -> Interj = \s -> lin Interj {s=s} ;
   mkMU : Str -> MU = \s -> lin MU {s=s; isPre=False} ;
 
-  mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Dat} ;
+  mkPrep : Str -> Prep = \s -> lin Prep {s=s; c=Dat; isPre=False} ;
   
   singular : Number = Sg ;
   plural : Number = Pl ;

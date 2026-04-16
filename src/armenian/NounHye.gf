@@ -1,8 +1,13 @@
 concrete NounHye of Noun = CatHye ** open ResHye in {
+  lin AdjCN ap cn = {
+        s = \\sp,c,n =>
+                case ap.isPre of {
+                  True  => ap.s ! Indef ! Nom ! Sg ++ cn.s ! sp ! c ! n;
+                  False => cn.s ! sp ! c ! n ++ ap.s ! Indef ! Nom ! Sg
+                }
+      } ;
   lin AdvCN cn adv = {
-        s = \\sp,c,num => cn.s ! sp ! c ! num ++ adv.s ;
-        poss1 = \\c,num => cn.poss1 ! c ! num ++ adv.s ;
-        poss2 = \\c,num => cn.poss2 ! c ! num ++ adv.s
+        s = \\sp,c,num => adv.s ++ cn.s ! sp ! c ! num
       } ;
   lin DefArt = {s = []; sp = Def} ;
   lin DetCN det cn = {s = \\c => det.s ++ cn.s ! det.sp ! c ! det.n;
@@ -12,7 +17,7 @@ concrete NounHye of Noun = CatHye ** open ResHye in {
   lin NumPl = {s = []; n = Pl} ;
   lin NumSg = {s = []; n = Sg} ;
   lin PossPron pron = {s = pron.empty; sp = Poss pron.a.p} ;
-  lin UseN n = n ** {
+  lin UseN n = {
         s = \\sp,c,num =>
                 case <sp,c> of {
                   <Def,Nom> => n.def_nom ! num ;
