@@ -13,9 +13,13 @@ concrete NounHye of Noun = CatHye ** open ResHye in {
   lin DetCN det cn = {s = \\c => det.s ++ cn.s ! det.sp ! c ! det.n;
                       a = {n=det.n; p=P3}} ;
   lin DetQuant quant num = {s = quant.s ++ num.s; n = num.n; sp=quant.sp} ;
-  lin IndefArt = {s = []; sp = Indef} ;
+  lin IndefArt = {s = "մի"; sp = Indef} ;
   lin NumPl = {s = []; n = Pl} ;
   lin NumSg = {s = []; n = Sg} ;
+  lin MassNP cn = {
+        s = \\c => cn.s ! Indef ! c ! Sg;
+        a = {n=Sg; p=P3}
+      } ;
   lin PossPron pron = {s = pron.empty; sp = Poss pron.a.p} ;
   lin UseN n = {
         s = \\sp,c,num =>
