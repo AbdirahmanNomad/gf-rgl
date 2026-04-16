@@ -31,4 +31,5 @@ concrete VerbHye of Verb = CatHye ** open Prelude,ResHye in {
                           subjunctive = \\a,p,n => vp.subjunctive ! a ! p ! n
                                                      ++ vp.c2.s ++ np.s ! vp.c2.c} ;
   lin SlashV2a v = v ;
+  lin UseV v = v ;
 }
