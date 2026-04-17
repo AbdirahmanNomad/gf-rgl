@@ -214,13 +214,13 @@ oper
       poss = {s = quantTable "aag" "aad" ; short = quantTable "aa" ; sp = gnTable "aag" "aad" "uwaag"}
       } ;
     Sg3 Masc => {
-      s = table {Nom => "uu" ; Abs => []} ;
+      s = table {Nom => "uu" ; Abs => "isaga"} ;
       a = Sg3 Masc ; isPron = True ; sp = table {Nom => "isagu" ; _ => "isaga"} ;
       empty = [] ; st = Definite ;
       poss = {s, short = quantTable "iis" ; sp = gnTable "iis" "iis" "uwiis"}
       } ;
     Sg3 Fem => {
-      s = table {Nom => "ay" ; Abs => []} ;
+      s = table {Nom => "ay" ; Abs => "iyada"} ;
       a = Sg3 Fem ; isPron = True ; sp = table {Nom => "iyadu" ; _ => "iyada"} ;
       empty = [] ; st = Definite ;
       poss = {s, short = quantTable "eed" ; sp = gnTable "eed" "eed" "uweed"}
